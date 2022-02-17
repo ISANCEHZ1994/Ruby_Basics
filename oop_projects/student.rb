@@ -97,6 +97,3 @@ john.last_name = israel.last_name
 puts "<================= [ John has been altered ] =======================>"
 puts john
 
-
-
-
