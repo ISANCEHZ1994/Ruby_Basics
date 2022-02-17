@@ -1,9 +1,11 @@
-require 'bcrypt'
-
 # REMEMBER the PUTS if the work does not show!!
 # ALL TESTING IS DONE - transformed into Module so now it can be used anywhere else ( think of a Class )
 # in this case we are using the Crud Module inside of the crud.rb file!
+# added self. to the methods so that it can be used in other files - can also type Crud. and it would still work
 module Crud
+    require 'bcrypt'
+
+    puts "MODULE CRUD: ACTIVATED!"
     # users = [
     #           { username: "mashrur", password: "password1" },
     #           { username: "jack", password: "password2" },

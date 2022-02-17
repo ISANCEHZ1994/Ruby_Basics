@@ -1,4 +1,10 @@
+# importing this file
+require_relative 'authenticate'
+
 class Student
+    # instead of using self. or Crud. on all methods inside of the authenticate.rb file
+    include Crud # we are including the module INSIDE of the authenticate file - in this case the module Crud
+
     # if we see the CLASSICAL getter and setter for first_name (below the @<VARIABLEs>)
     # it is redundant to think about repeating this for every single variable => D.R.Y. Principle
     attr_accessor :first_name, :last_name, :email, :username, :password
@@ -89,11 +95,19 @@ end
 # it is a lot of repeating code and it would be annoying to keep retyping everything
 # We will add the INITALIZE method ABOVE!
 
-israel = Student.new("Israel", "Sanchez", "Israel.pro1994@gmail.com", "PizzaTrash", "Is092094$")
-john = Student.new("John", "Doe", "fakeassEmail@gmail.com", "JDOVAHERRE", "123")
-puts israel
-puts john 
-john.last_name = israel.last_name
-puts "<================= [ John has been altered ] =======================>"
-puts john
+# israel = Student.new("Israel", "Sanchez", "Israel.pro1994@gmail.com", "PizzaTrash", "Is092094$")
+# john = Student.new("John", "Doe", "fakeassEmail@gmail.com", "JDOVAHERRE", "123")
+# puts israel
+# puts john 
+# john.last_name = israel.last_name
+# puts "<================= [ John has been altered ] =======================>"
+# puts john
 
+mashrur = Student.new("Mashrur", "Hossain", "mashrur1", "mashrur@example.com",
+                      "password1")
+john = Student.new("John", "Doe", "john1", "john1@example.com",
+                      "password2")
+ 
+hashed_password = mashrur.create_hash_digest(mashrur.password)
+ 
+puts hashed_password
