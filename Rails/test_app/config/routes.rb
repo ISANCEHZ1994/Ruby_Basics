@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   # Offically:
   # Define a route that points to a controller#action
   root 'page#home'
-  resources :pages
+  resources :pages # remembering from previous knowledge
 
 end
