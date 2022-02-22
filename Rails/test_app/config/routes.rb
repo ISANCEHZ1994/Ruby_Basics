@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   # routes always looks at the controller folder 
   # so think <fileName>#<methodName> - we are looking for the hello method inside of application file   
 
-
   # Offically:
   # Define a route that points to a controller#action
   root 'page#home'
-  resources :pages # remembering from previous knowledge
+  get 'about', to: 'page#about'  
+
+  
+  resources :page # remembering from previous knowledge
 
 end
