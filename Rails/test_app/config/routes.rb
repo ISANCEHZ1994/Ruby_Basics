@@ -1,5 +1,6 @@
-Rails.application.routes.draw do
-  
+Rails.application.routes.draw do  
+  # this confirms my previous knowledge below!
+  resources :articles
   # root 'application#hello'
 
   # Ruby is smart enough to know that you mean <application_controller.rb> file 
@@ -10,8 +11,11 @@ Rails.application.routes.draw do
   # Define a route that points to a controller#action
   root 'page#home'
   get 'about', to: 'page#about'  
-
+  
   
   resources :page # remembering from previous knowledge
+
+  # COMMAND: rails routes --expanded
+  # command will show routes organized
 
 end
